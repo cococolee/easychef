@@ -1,23 +1,242 @@
 <!DOCTYPE html>
-<style>
-  /* netnet default bg */
-  body {
-    margin: 0;
-    background-image: linear-gradient(#515199a8 2px, transparent 1px),
-      linear-gradient(90deg, #515199a8 2px, transparent 1px);
-    background-size: 50px 50px;
-    position: relative;
-    z-index: 1;
-    overflow: hidden;
-  }
+<html lang="en">
 
-  body::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(0deg, #c76ebca8, #515199a8);
-  }
-</style>
+    <!--   Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Agbalumo&family=Caprasimo&family=Chango&family=Montserrat+Subrayada:wght@700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+  
+  <style>
+  /* netnet default bg */
+  * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      top: 50%;
+    }
+
+    body {
+      text-align: center;
+      line-height: 0.8;
+      font-family: "Montserrat";
+    }
+
+    header {
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      font-family: 'Verdana', sans-serif;  
+      font-size: 5em;
+      padding: 15px;
+      text-align: left;
+      position: absolute;
+      top: 30%;
+      left: 22%;
+      transform: translate(-50%, -50%);
+    }
+
+    nav {
+      display: flex;
+      justify-content: right;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      padding: 10px;
+      margin: 0 10px;
+      transition: background-color 0.3s;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    nav a:hover {
+       color: white;
+      text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+    	color: white;
+    }
+
+
+  
+   .gallery-header {
+      font-size: 3em;
+      color: black;
+      margin-top: 20px;
+      margin-right: 60px;
+      margin-left: 60px;
+/*       font-family: 'Verdana', sans-serif; */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+/*       text-stroke: bold;
+      text-style: bold; */
+/*       font-weight: 900; */
+              font-family: "Montserrat";
+/*         text-shadow: 2px 2px 4px rgba(205, 100, 160, 0.5);  */
+    }
     
+    .gallery h4 {
+/*       font-family: "Montserrat"; */
+      font-family: "DM Sans";
+
+
+      font-size: 16px;
+      line-height: 1.5;
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+ 
+        .gallery h3 {
+      font-family: "Montserrat";
+          color: grey;
+      font-size: 18px;
+      line-height: 1.5;
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+   
+     .gallery h2 {
+      font-family: "Montserrat";
+      line-height: 1.5;
+      margin-right: 60px;
+      margin-left: 60px;
+    }
+
+    .gallery-container {
+      display: flex;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 50px;
+      box-sizing: border-box;
+    }
+
+    .gallery {
+      flex: 0 0 auto;
+      margin-right: 50px; /* Adjust the margin between galleries as needed */
+      overflow: hidden;
+			position: relative;
+    }
+
+    .gallery img {
+      max-height: 400px;
+      min-height: 300px;
+      width: auto;
+      object-fit: cover;
+    }
+
+    .description-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.5s;
+      line-height: 1.5;
+      text-align: center;
+      font-family: "Montserrat";
+}
+
+    .gallery:hover .description-overlay {
+      opacity: 1;
+}
+  
+</style>
+     <body>
+        <nav>
+<!--     <a href="#https://netnet.studio/?gh=cococolee/chloelee/main">Home</a> -->
+    <a href="https://cococolee.github.io/chloelee/#about">Home</a>
+    <a href="#mywork">My Work</a>
+          <a href="https://drive.google.com/file/d/1n7HJacLfEGdCsBsEXe_IwDumqxjZA-jS/view?usp=share_link" target="_blank">Resume</a>
+<!--       <a href="https://docs.google.com/document/d/1Yjn0Qj1xV_dQhlkf0yps-Es0Bfg3Eqj8VI-Ygya2QAU/edit?usp=sharing" target="_blank">Resume</a> -->
+<!--     <a href="https://cococolee.github.io/contactme/">Contact</a> --> 
+  </nav>
+       
+       
+        <div class="gallery-header">EASYCHEF APP DESIGN</div>
+
+     <div class="gallery-container">
+      <div class="gallery">
+      <img src="Screen Shot 2024-02-24 at 1.52.17 AM.png" alt="Design 1">
+  </div>
+  </div>
+
+      <div class="gallery h4">  
+        <br>
+        <h2>
+        The Problem: 
+</h2>
+        <br> 
+        <h4>
+          Busy individuals such as college students, stay-at-home parents, and full-time workers struggle to find time to cook meals and often lack the knowledge to prepare diverse and flavorful dishes. 
+          
+          Often too much time is spent searching the internet for trustworthy recipes and there's a lack of a supportive community to rely on for culinary guidance. 
+
+        </h4>
+        <br>
+        <br>
+       <h2>The Design Process:</h2>
+        
+   <div class="gallery-container">
+  <div class="gallery">
+    <img src="Screen Shot 2024-02-23 at 9.11.04 PM.png" alt="Design 1">
+    <div class="description-overlay">
+      <h2>Crazy 8s</h2>
+      <p>Helped us get down ideas efficiently
+        <br>and identified what the team thinks 
+        <br>is most important to include.</p>
+    </div>  
+  </div>
+  
+  <div class="gallery">
+    <img src="Screen Shot 2024-02-23 at 9.16.33 PM.png" alt="Design 2">
+    <div class="description-overlay">
+      <h2>Annotated Wireframes</h2>
+      <p>Gave us more detailed insight on the purpose
+        <br>of each feature which was very helpful for
+        <br> the paper and high-fidelity prototypes.
+      </p>
+    </div>
+  </div>
+  
+  <div class="gallery">
+    <img src="Screen Shot 2024-02-23 at 9.11.58 PM.png" alt="Design 1">
+    <div class="description-overlay">
+      <h2>Paper Prototype</h2>
+      <p>Gained insight into its initial layout and 
+        <br>functionality. Goal was to create a user-
+        <br>friendly experience that prioritizes ease
+        <br>of navigation and accessibility for all 
+        <br>users.  
+      </p>
+    </div>
+  </div>
+</div>
+        
+
+        
+   <div class="gallery h4">     
+      <h2>The Result: </h2>
+     <br>
+     <h4>
+      After utilizing the Crazy 8 brainstorming to create wireframes, we conducted two rounds of evaluations. The first was a cognitive walkthrough of the paper prototypes and the second was a heuristic evaluation on the initial mockups for our app. 
+       
+       Drawing on feedback from the usability testings, we refined the final mockup version of our product.
+</h4>
+    <br>
+       
+  
+  </div>
+       </div>
+       </body>
+</html>
